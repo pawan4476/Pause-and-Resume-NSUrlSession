@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6CF-Ax-7r6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TqZ-6S-MM9"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LOD-4X-YDZ"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN9-fH-uCX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Phc-Dt-uns"/>
+                                    <constraint firstAttribute="width" constant="80" id="lBE-P1-Mwp"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJx-d1-xSs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-0W-38X">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G85-Rf-QtJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="fc9-o1-dAl"/>
+                                </constraints>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="63D-L7-Dzj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NN9-fH-uCX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Xs-iz-v1m"/>
+                            <constraint firstItem="LOD-4X-YDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4w3-Pr-Tgk"/>
+                            <constraint firstItem="lBd-0W-38X" firstAttribute="leading" secondItem="NN9-fH-uCX" secondAttribute="trailing" constant="183" id="Bo4-Oh-QUL"/>
+                            <constraint firstItem="TqZ-6S-MM9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NF9-V4-Oly"/>
+                            <constraint firstItem="lBd-0W-38X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vib-X7-J8U"/>
+                            <constraint firstItem="lBd-0W-38X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="W93-so-i5A"/>
+                            <constraint firstItem="TqZ-6S-MM9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dW4-ff-4tY"/>
+                            <constraint firstAttribute="trailing" secondItem="TqZ-6S-MM9" secondAttribute="trailing" id="eEs-Wk-ADG"/>
+                            <constraint firstItem="LOD-4X-YDZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hKt-u7-eRr"/>
+                            <constraint firstItem="lBd-0W-38X" firstAttribute="leading" secondItem="NN9-fH-uCX" secondAttribute="trailing" constant="183" id="lru-NW-QKb"/>
+                            <constraint firstItem="NN9-fH-uCX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qAl-o5-sfI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TqZ-6S-MM9" secondAttribute="bottom" id="qXL-yC-VHz"/>
+                            <constraint firstItem="LOD-4X-YDZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uMW-k7-WSK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9gZ-8g-gAJ"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="NN9-fH-uCX" id="GIr-4Y-1Be"/>
+                        <outlet property="imageView" destination="TqZ-6S-MM9" id="S45-xd-7bk"/>
+                        <outlet property="progressView" destination="LOD-4X-YDZ" id="cHm-DP-EP5"/>
+                        <outlet property="resumeButton" destination="lBd-0W-38X" id="gFe-24-PFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="-543.77811094452773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kbI-Ua-QoM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6CF-Ax-7r6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aPz-D3-Yav">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HKQ-hl-30a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3Z-mm-UX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>
